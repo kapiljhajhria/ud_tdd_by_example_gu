@@ -12,11 +12,11 @@ public class MonetTest {
 
         Dollar product = five.times(2);
 
-        Assertions.assertEquals(10, product.amount);
+        Assertions.assertEquals(10, product);
 
         product = five.times(3);
 
-        Assertions.assertEquals(15, product.amount);
+        Assertions.assertEquals(15, product);
     }
 
     @Test
