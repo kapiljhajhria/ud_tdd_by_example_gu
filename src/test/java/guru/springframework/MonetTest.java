@@ -22,5 +22,6 @@ public class MonetTest {
     @Test
     void testEquality() {
         Assertions.assertEquals(new Dollar(5),new Dollar(5));
+        Assertions.assertNotEquals(new Dollar(5),new Dollar(6));
     }
 }
