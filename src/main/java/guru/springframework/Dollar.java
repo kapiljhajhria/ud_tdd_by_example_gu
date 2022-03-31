@@ -10,8 +10,4 @@ public class Dollar extends Money {
         return Money.dollar(amount*multiplier);
     }
 
-    @Override
-    public String currency() {
-        return this.currency;
-    }
 }
