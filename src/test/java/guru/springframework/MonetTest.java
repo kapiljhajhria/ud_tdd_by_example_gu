@@ -10,31 +10,31 @@ public class MonetTest {
 
         Money five =  Money.dollar(5);
 
-        Assertions.assertEquals(new Dollar(10,"USD"), five.times(2));
-        Assertions.assertEquals(new Dollar(15,"USD"), five.times(3));
+        Assertions.assertEquals(new Money(10,"USD"), five.times(2));
+        Assertions.assertEquals(new Money(15,"USD"), five.times(3));
     }
 
     @Test
     void testEqualityDollar() {
-        Assertions.assertEquals(new Dollar(5,"USD"),new Dollar(5,"USD"));
-        Assertions.assertNotEquals(new Dollar(5,"USD"),new Dollar(6,"USD"));
+        Assertions.assertEquals(new Money(5,"USD"),new Money(5,"USD"));
+        Assertions.assertNotEquals(new Money(5,"USD"),new Money(6,"USD"));
     }
 
     @Test
     public void testMultiplicationFranc() {
 
-        Money five = (Franc) Money.franc(5);
+        Money five =  Money.franc(5);
 
-        Assertions.assertEquals(new Franc(10,"CHF"), five.times(2));
+        Assertions.assertEquals(new Money(10,"CHF"), five.times(2));
 
-        Assertions.assertEquals(new Franc(15,"CHF"), five.times(3));
+        Assertions.assertEquals(new Money(15,"CHF"), five.times(3));
     }
 
     @Test
     void testEqualityFranc() {
-        Assertions.assertEquals(new Franc(5,"CHF"),new Franc(5,"CHF"));
-        Assertions.assertNotEquals(new Franc(5,"CHF"),new Franc(6,"CHF"));
-        Assertions.assertNotEquals(new Dollar(5,"USD"),new Franc(5,"CHF"));
+        Assertions.assertEquals(new Money(5,"CHF"),new Money(5,"CHF"));
+        Assertions.assertNotEquals(new Money(5,"CHF"),new Money(6,"CHF"));
+        Assertions.assertNotEquals(new Money(5,"USD"),new Money(5,"CHF"));
     }
 
     @Test

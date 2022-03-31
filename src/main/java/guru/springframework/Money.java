@@ -14,12 +14,12 @@ public  class Money {
         return new Money(amount * multiplier, currency);
     }
 
-    public static Dollar dollar(int multiplier) {
-        return new Dollar(multiplier, "USD");
+    public static Money dollar(int multiplier) {
+        return new Money(multiplier, "USD");
     }
 
-    public static Franc franc(int multiplier) {
-        return new Franc(multiplier, "CHF");
+    public static Money franc(int multiplier) {
+        return new Money(multiplier, "CHF");
     }
 
 
