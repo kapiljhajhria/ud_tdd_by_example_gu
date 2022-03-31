@@ -8,7 +8,7 @@ public class MonetTest {
     @Test
     public void testMultiplicationDollar() {
 
-        Dollar five =  Money.dollar(5);
+        Money five =  Money.dollar(5);
 
         Assertions.assertEquals(new Dollar(10,"USD"), five.times(2));
         Assertions.assertEquals(new Dollar(15,"USD"), five.times(3));
@@ -23,7 +23,7 @@ public class MonetTest {
     @Test
     public void testMultiplicationFranc() {
 
-        Franc five =  Money.franc(5);
+        Money five = (Franc) Money.franc(5);
 
         Assertions.assertEquals(new Franc(10,"CHF"), five.times(2));
 
