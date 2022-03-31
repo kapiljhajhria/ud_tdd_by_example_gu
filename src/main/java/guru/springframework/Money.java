@@ -8,11 +8,11 @@ public abstract class Money {
 
     public static Dollar dollar(int multiplier){
         return new Dollar(multiplier);
-    };
+    }
 
     public static Franc franc(int multiplier){
         return new Franc(multiplier);
-    };
+    }
 
 
     public boolean equals(Object object) {
