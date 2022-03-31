@@ -10,12 +10,12 @@ public class MonetTest {
 
         Dollar five = new Dollar(5);
 
-        five.times(2);
+        Dollar product = five.times(2);
 
-        Assertions.assertEquals(10, five.amount);
+        Assertions.assertEquals(10, product.amount);
 
-        five.times(3);
+        product = five.times(3);
 
-        Assertions.assertEquals(15, five.amount);
+        Assertions.assertEquals(15, product.amount);
     }
 }
