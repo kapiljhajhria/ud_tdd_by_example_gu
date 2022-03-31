@@ -3,15 +3,16 @@ package guru.springframework;
 public abstract class Money {
 
     protected int amount;
+    protected String currency;
 
     public abstract Money times(int multiplier);
 
-    public static Dollar dollar(int multiplier){
-        return new Dollar(multiplier);
+    public static Dollar dollar(int multiplier) {
+        return new Dollar(multiplier, "USD");
     }
 
-    public static Franc franc(int multiplier){
-        return new Franc(multiplier);
+    public static Franc franc(int multiplier) {
+        return new Franc(multiplier, "CHF");
     }
 
 
@@ -20,4 +21,5 @@ public abstract class Money {
         return amount == money.amount && getClass().equals(object.getClass());
     }
 
+    public abstract String currency();
 }
