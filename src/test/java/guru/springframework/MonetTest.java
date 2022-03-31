@@ -18,4 +18,9 @@ public class MonetTest {
 
         Assertions.assertEquals(15, product.amount);
     }
+
+    @Test
+    void testEquality() {
+        Assertions.assertEquals(new Dollar(5),new Dollar(5));
+    }
 }
