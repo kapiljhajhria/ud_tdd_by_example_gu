@@ -8,15 +8,10 @@ public class MonetTest {
     @Test
     public void testMultiplicationDollar() {
 
-        Dollar five = new Dollar(5);
+        Dollar five =  Money.dollar(5);
 
-        Dollar product = five.times(2);
-
-        Assertions.assertEquals(new Dollar(10), product);
-
-        product = five.times(3);
-
-        Assertions.assertEquals(new Dollar(15), product);
+        Assertions.assertEquals(new Dollar(10), five.times(2));
+        Assertions.assertEquals(new Dollar(15), five.times(3));
     }
 
     @Test
@@ -28,15 +23,11 @@ public class MonetTest {
     @Test
     public void testMultiplicationFranc() {
 
-        Franc five = new Franc(5);
+        Franc five =  Money.franc(5);
 
-        Franc product = five.times(2);
+        Assertions.assertEquals(new Franc(10), five.times(2));
 
-        Assertions.assertEquals(new Franc(10), product);
-
-        product = five.times(3);
-
-        Assertions.assertEquals(new Franc(15), product);
+        Assertions.assertEquals(new Franc(15), five.times(3));
     }
 
     @Test
